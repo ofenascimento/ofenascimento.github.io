@@ -17,3 +17,18 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+window.addEventListener('scroll', function() {
+  const scrollPosition = window.scrollY;
+
+  const row1 = document.getElementById('row1');
+  const row2 = document.getElementById('row2');
+
+  row1.style.transform = `translateX(${scrollPosition * 0.5}px)`;
+  row2.style.transform = `translateX(${-scrollPosition * 0.5}px)`;
+});
+
+
+
+
+
