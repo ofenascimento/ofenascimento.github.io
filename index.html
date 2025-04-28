@@ -166,13 +166,14 @@
           >
             Experiência
           </a>
-          <!-- <a
+          <a
             href="#"
             id="tab-education"
             class="pb-2 text-gray-500 hover:text-gray-800"
           >
             Educação
           </a>
+          <!-- 
           <a
             href="#"
             id="tab-about"
@@ -186,7 +187,8 @@
           id="projects-section"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-8"
         >
-          <a href="https://livrosgratuitos.com"
+          <a
+            href="https://livrosgratuitos.com"
             class="bg-gray-50 rounded-lg overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
           >
             <img
@@ -195,17 +197,20 @@
               class="w-full"
             />
           </a>
-          <a href="https://tools4css.com"
+          <a
+            href="https://tools4css.com"
             class="bg-gray-50 rounded-lg overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
           >
             <img src="./assets/tools4css.png" alt="Tools4CSS" class="w-full" />
           </a>
-          <a href="https://pix-qr-code.com"
+          <a
+            href="https://pix-qr-code.com"
             class="bg-gray-50 rounded-lg overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
           >
             <img src="./assets/pix.png" alt="Ref" class="w-full" />
           </a>
-          <a href="https://encurts.com"
+          <a
+            href="https://encurts.com"
             class="bg-gray-50 rounded-lg overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
           >
             <img src="./assets/encurts.png" alt="Encurts" class="w-full" />
@@ -256,19 +261,33 @@
             </ul>
           </div>
         </section>
+        <section id="education-section" class="hidden space-y-6">
+          <div>
+            <h3 class="font-semibold text-lg">Estácio</h3>
+            <span class="text-gray-600 text-sm"
+              >2018 - 2021</span
+            >
+            <p
+              class="text-gray-600 text-sm"
+            >
+              Análise e Desenvolvimento de Sistemas - Tecnólogo
+            </p>
+          </div>
+        </section>
       </main>
     </div>
 
-    <!-- Script inline para alternar abas -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const tabs = {
           projects: document.getElementById("tab-projects"),
           experience: document.getElementById("tab-experience"),
+          education: document.getElementById("tab-education"),
         };
         const sections = {
           projects: document.getElementById("projects-section"),
           experience: document.getElementById("experience-section"),
+          education: document.getElementById("education-section"),
         };
 
         function activate(tab) {
@@ -292,6 +311,10 @@
         tabs.experience.addEventListener("click", (e) => {
           e.preventDefault();
           activate("experience");
+        });
+        tabs.education.addEventListener("click", (e) => {
+          e.preventDefault();
+          activate("education");
         });
       });
     </script>
